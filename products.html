@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Products | AutoParts Store</title>
   <link rel="stylesheet" href="vendor/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
   <a class="visually-hidden-focusable" href="#main">Skip to content</a>
@@ -13,51 +13,73 @@
   <div class="site-container header-inner">
     <a class="brand" href="index.html" aria-label="AutoParts Store home"><span class="brand-mark" aria-hidden="true"></span><span>AUTOPARTS <strong>STORE</strong></span></a>
     <nav class="desktop-nav" aria-label="Main navigation"><a href="index.html">HOME</a><a href="products.html" aria-current="page">PRODUCTS</a><a href="categories.html">CATEGORIES</a><a href="about.html">ABOUT</a><a href="contact.html">CONTACT</a></nav>
-    <div class="cart-label"><img src="assets/cart.svg" alt=""> CART</div>
+    <a class="cart-label" href="products.html#cart"><img src="assets/cart.svg" alt=""> CART</a>
     <details class="mobile-nav"><summary aria-label="Open navigation">☰</summary><nav aria-label="Mobile navigation"><a href="index.html">HOME</a><a href="products.html" aria-current="page">PRODUCTS</a><a href="categories.html">CATEGORIES</a><a href="about.html">ABOUT</a><a href="contact.html">CONTACT</a></nav></details>
   </div>
 </header>
-  <main id="main"><section class="title-bar"><div class="site-container title-flex"><div><h1>ALL PRODUCTS</h1><p>Home / Products</p></div><p>Showing 1-4 of 24 results</p></div></section>
+  <main id="main"><section class="title-bar"><div class="site-container title-flex"><div><h1>ALL PRODUCTS</h1><p>Home / Products</p></div><p>7 products</p></div></section>
 <section class="products-main"><div class="site-container catalog">
-  <aside class="filters"><h2>CATEGORIES</h2><div class="filter-option"><span class="check checked"></span>Engine Parts</div><div class="filter-option"><span class="check"></span>Brake Systems</div><div class="filter-option"><span class="check"></span>Suspension</div><div class="filter-option"><span class="check"></span>Electronics</div><hr><h2>PRICE RANGE</h2><div class="price-track"><span></span></div><div class="range-labels"><span>$0</span><span>$500+</span></div></aside>
-  <div class="catalog-content"><div class="catalog-grid">
-    <article class="product-card">
-  <div class="product-image" role="img" aria-label="Product image placeholder"></div>
+  <aside class="filters"><fieldset><legend>CATEGORIES</legend><label class="filter-option"><input type="radio" id="category-all" name="category" checked><span>All Categories</span></label><label class="filter-option"><input type="radio" id="category-engine" name="category"><span>Engine Parts</span></label><label class="filter-option"><input type="radio" id="category-brakes" name="category"><span>Brake Systems</span></label><label class="filter-option"><input type="radio" id="category-wheels" name="category"><span>Wheels & Tires</span></label><label class="filter-option"><input type="radio" id="category-suspension" name="category"><span>Suspension</span></label><label class="filter-option"><input type="radio" id="category-electronics" name="category"><span>Electronics</span></label><label class="filter-option"><input type="radio" id="category-body" name="category"><span>Body & Exterior</span></label><label class="filter-option"><input type="radio" id="category-exhaust" name="category"><span>Exhaust Systems</span></label></fieldset><hr><fieldset><legend>PRICE RANGE</legend><label class="filter-option"><input type="radio" id="price-all" name="price" checked><span>All Prices</span></label><label class="filter-option"><input type="radio" id="price-low" name="price"><span>Under $100</span></label><label class="filter-option"><input type="radio" id="price-mid" name="price"><span>$100–$200</span></label><label class="filter-option"><input type="radio" id="price-high" name="price"><span>Over $200</span></label></fieldset></aside>
+  <form class="catalog-content" id="order-form" action="mailto:supportautopartsstore@gmail.com" method="post" enctype="text/plain">
+    <div class="catalog-grid"><article class="product-card filter-engine price-low" id="product-air">
+  <img class="product-image" src="assets/air-filter.png" alt="Performance Air Filter" loading="lazy">
   <div class="product-meta"><span>SKU: ENG-101</span><span class="rating"><img src="assets/star.svg" alt=""> 5.0</span></div>
   <h3>Performance Air Filter</h3><p class="price">$45.00</p>
-  <div class="add-cart"><img src="assets/cart-small.svg" alt=""> ADD TO CART</div>
-</article>
-    <article class="product-card">
-  <div class="product-image" role="img" aria-label="Product image placeholder"></div>
+  <input class="product-select" id="select-air" name="Product" value="Performance Air Filter — $45.00" type="checkbox">
+  <label class="add-cart" for="select-air"><img src="assets/cart-small.svg" alt=""><span class="add-text">ADD TO CART</span><span class="remove-text">REMOVE FROM CART</span></label>
+</article><article class="product-card filter-brakes price-mid" id="product-rotor">
+  <img class="product-image" src="assets/brake-rotor.png" alt="Front Brake Rotor" loading="lazy">
   <div class="product-meta"><span>SKU: BRK-204</span><span class="rating"><img src="assets/star.svg" alt=""> 5.0</span></div>
   <h3>Front Brake Rotor</h3><p class="price">$189.00</p>
-  <div class="add-cart"><img src="assets/cart-small.svg" alt=""> ADD TO CART</div>
-</article>
-    <article class="product-card">
-  <div class="product-image" role="img" aria-label="Product image placeholder"></div>
+  <input class="product-select" id="select-rotor" name="Product" value="Front Brake Rotor — $189.00" type="checkbox">
+  <label class="add-cart" for="select-rotor"><img src="assets/cart-small.svg" alt=""><span class="add-text">ADD TO CART</span><span class="remove-text">REMOVE FROM CART</span></label>
+</article><article class="product-card filter-suspension price-high" id="product-shock">
+  <img class="product-image" src="assets/shock-absorber.png" alt="Shock Absorber" loading="lazy">
   <div class="product-meta"><span>SKU: SUS-310</span><span class="rating"><img src="assets/star.svg" alt=""> 5.0</span></div>
   <h3>Shock Absorber</h3><p class="price">$245.00</p>
-  <div class="add-cart"><img src="assets/cart-small.svg" alt=""> ADD TO CART</div>
-</article>
-    <article class="product-card">
-  <div class="product-image" role="img" aria-label="Product image placeholder"></div>
+  <input class="product-select" id="select-shock" name="Product" value="Shock Absorber — $245.00" type="checkbox">
+  <label class="add-cart" for="select-shock"><img src="assets/cart-small.svg" alt=""><span class="add-text">ADD TO CART</span><span class="remove-text">REMOVE FROM CART</span></label>
+</article><article class="product-card filter-electronics price-mid" id="product-battery">
+  <img class="product-image" src="assets/battery.png" alt="Car Battery" loading="lazy">
   <div class="product-meta"><span>SKU: ELC-410</span><span class="rating"><img src="assets/star.svg" alt=""> 5.0</span></div>
   <h3>Car Battery</h3><p class="price">$165.00</p>
-  <div class="add-cart"><img src="assets/cart-small.svg" alt=""> ADD TO CART</div>
-</article>
-  </div><div class="pagination-design text-center" aria-label="Page 1 of 3"><span class="active">1</span><span>2</span><span>3</span></div></div>
+  <input class="product-select" id="select-battery" name="Product" value="Car Battery — $165.00" type="checkbox">
+  <label class="add-cart" for="select-battery"><img src="assets/cart-small.svg" alt=""><span class="add-text">ADD TO CART</span><span class="remove-text">REMOVE FROM CART</span></label>
+</article><article class="product-card filter-wheels price-mid" id="product-tire">
+  <img class="product-image" src="assets/tire.png" alt="Alloy Wheel & Tire" loading="lazy">
+  <div class="product-meta"><span>SKU: WHL-520</span><span class="rating"><img src="assets/star.svg" alt=""> 5.0</span></div>
+  <h3>Alloy Wheel & Tire</h3><p class="price">$199.00</p>
+  <input class="product-select" id="select-tire" name="Product" value="Alloy Wheel & Tire — $199.00" type="checkbox">
+  <label class="add-cart" for="select-tire"><img src="assets/cart-small.svg" alt=""><span class="add-text">ADD TO CART</span><span class="remove-text">REMOVE FROM CART</span></label>
+</article><article class="product-card filter-body price-low" id="product-mirror">
+  <img class="product-image" src="assets/body-mirror.png" alt="Side Mirror" loading="lazy">
+  <div class="product-meta"><span>SKU: BDY-615</span><span class="rating"><img src="assets/star.svg" alt=""> 5.0</span></div>
+  <h3>Side Mirror</h3><p class="price">$89.00</p>
+  <input class="product-select" id="select-mirror" name="Product" value="Side Mirror — $89.00" type="checkbox">
+  <label class="add-cart" for="select-mirror"><img src="assets/cart-small.svg" alt=""><span class="add-text">ADD TO CART</span><span class="remove-text">REMOVE FROM CART</span></label>
+</article><article class="product-card filter-exhaust price-high" id="product-muffler">
+  <img class="product-image" src="assets/exhaust.png" alt="Stainless Steel Muffler" loading="lazy">
+  <div class="product-meta"><span>SKU: EXH-720</span><span class="rating"><img src="assets/star.svg" alt=""> 5.0</span></div>
+  <h3>Stainless Steel Muffler</h3><p class="price">$229.00</p>
+  <input class="product-select" id="select-muffler" name="Product" value="Stainless Steel Muffler — $229.00" type="checkbox">
+  <label class="add-cart" for="select-muffler"><img src="assets/cart-small.svg" alt=""><span class="add-text">ADD TO CART</span><span class="remove-text">REMOVE FROM CART</span></label>
+</article></div>
+    <section class="cart-summary" id="cart"><h2>YOUR CART</h2><p class="empty-cart">Select products above to add them to your cart.</p><ul class="cart-items"><li class="cart-item cart-air"><span>Performance Air Filter</span><strong>$45.00</strong></li><li class="cart-item cart-rotor"><span>Front Brake Rotor</span><strong>$189.00</strong></li><li class="cart-item cart-shock"><span>Shock Absorber</span><strong>$245.00</strong></li><li class="cart-item cart-battery"><span>Car Battery</span><strong>$165.00</strong></li><li class="cart-item cart-tire"><span>Alloy Wheel & Tire</span><strong>$199.00</strong></li><li class="cart-item cart-mirror"><span>Side Mirror</span><strong>$89.00</strong></li><li class="cart-item cart-muffler"><span>Stainless Steel Muffler</span><strong>$229.00</strong></li></ul>
+      <div class="checkout-fields"><h3>ORDER INQUIRY</h3><p>Send your selected products to the store by email.</p><div class="row g-3"><div class="col-md-6"><label for="order-name">Full name</label><input class="form-control" id="order-name" name="Name" required></div><div class="col-md-6"><label for="order-email">Email</label><input class="form-control" id="order-email" name="Email" type="email" required></div><div class="col-12"><label for="order-vehicle">Vehicle model</label><input class="form-control" id="order-vehicle" name="Vehicle" placeholder="Year, make and model"></div><div class="col-12"><label for="order-message">Message</label><textarea class="form-control" id="order-message" name="Message" rows="3" placeholder="Fitment or delivery questions"></textarea></div></div><p class="choose-product-hint">Choose at least one product to continue.</p><button class="btn orange-button checkout-button" type="submit">EMAIL ORDER INQUIRY</button></div>
+    </section>
+  </form>
 </div>
-<div class="site-container comparison"><h2>PRODUCT COMPARISON</h2><div class="table-responsive"><table class="table table-bordered"><caption>Comparison of the four displayed products</caption><thead><tr><th scope="col">Product</th><th scope="col">Category</th><th scope="col">Price</th></tr></thead><tbody><tr><th scope="row">Performance Air Filter</th><td>Engine Parts</td><td>$45.00</td></tr><tr><th scope="row">Front Brake Rotor</th><td>Brake Systems</td><td>$189.00</td></tr><tr><th scope="row">Shock Absorber</th><td>Suspension</td><td>$245.00</td></tr><tr><th scope="row">Car Battery</th><td>Electronics</td><td>$165.00</td></tr></tbody></table></div></div>
+<div class="site-container comparison"><h2>PRODUCT COMPARISON</h2><div class="table-responsive"><table class="table table-bordered"><caption>Product and price comparison</caption><thead><tr><th scope="col">Product</th><th scope="col">Category</th><th scope="col">Price</th></tr></thead><tbody><tr><th scope="row">Performance Air Filter</th><td>Engine Parts</td><td>$45.00</td></tr><tr><th scope="row">Front Brake Rotor</th><td>Brake Systems</td><td>$189.00</td></tr><tr><th scope="row">Shock Absorber</th><td>Suspension</td><td>$245.00</td></tr><tr><th scope="row">Car Battery</th><td>Electronics</td><td>$165.00</td></tr><tr><th scope="row">Alloy Wheel & Tire</th><td>Wheels & Tires</td><td>$199.00</td></tr><tr><th scope="row">Side Mirror</th><td>Body & Exterior</td><td>$89.00</td></tr><tr><th scope="row">Stainless Steel Muffler</th><td>Exhaust Systems</td><td>$229.00</td></tr></tbody></table></div></div>
 </section></main>
   <footer class="site-footer">
   <div class="site-container">
     <div class="footer-columns">
-      <div class="footer-brand"><div class="brand"><span class="brand-mark small" aria-hidden="true"></span><span>AUTOPARTS <strong>STORE</strong></span></div><p>Premium commercial auto parts retailer. Delivering precision-engineered OEM and aftermarket components directly to mechanics and DIY enthusiasts.</p></div>
-      <div><h2>POPULAR CATEGORIES</h2></div>
-      <div><h2>CUSTOMER SERVICE</h2><ul><li>Shipping Policy</li><li>Returns &amp; Exchanges</li><li>Warranty Info</li><li>Fitment Guarantee</li></ul></div>
-      <div><h2>SUPPORT HELPLINE</h2></div>
+      <div class="footer-brand"><div class="brand"><span class="brand-mark small" aria-hidden="true"></span><span>AUTOPARTS <strong>STORE</strong></span></div><p>Automotive spare parts and accessories for drivers and mechanics.</p></div>
+      <div><h2>POPULAR CATEGORIES</h2><ul><li><a href="categories.html#engine">Engine Parts</a></li><li><a href="categories.html#brakes">Brake Systems</a></li><li><a href="categories.html#wheels">Wheels & Tires</a></li><li><a href="categories.html#suspension">Suspension</a></li></ul></div>
+      <div><h2>CUSTOMER SERVICE</h2><ul><li><a href="contact.html#contact-form">Contact Us</a></li><li><a href="products.html#cart">Order Inquiry</a></li><li><a href="about.html">About Us</a></li></ul></div>
+      <div><h2>SUPPORT HELPLINE</h2><p><a href="contact.html">Contact our team</a></p><p><a href="mailto:supportautopartsstore@gmail.com">supportautopartsstore@gmail.com</a></p></div>
     </div>
-    <div class="footer-bottom"><p>© 2026 AutoParts Store. All rights reserved. Built for professional fitment.</p><div class="socials"><span><img src="assets/facebook.svg" alt="Facebook"></span><span><img src="assets/instagram.svg" alt="Instagram"></span><span><img src="assets/youtube.svg" alt="YouTube"></span></div></div>
+    <div class="footer-bottom"><p>© 2026 AutoParts Store. All rights reserved.</p><div class="socials" aria-hidden="true"><span><img src="assets/facebook.svg" alt=""></span><span><img src="assets/instagram.svg" alt=""></span><span><img src="assets/youtube.svg" alt=""></span></div></div>
   </div>
 </footer>
 </body>
