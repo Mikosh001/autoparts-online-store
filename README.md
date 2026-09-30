@@ -18,4 +18,4 @@ Semantic HTML5, CSS3, and a local copy of Bootstrap 5.3.8 CSS. Layouts use Boots
 
 Published site: https://mikosh001.github.io/autoparts-online-store/
 
-Open `dist/index.html` in a browser or publish the contents of `dist` to GitHub Pages. On the Products page, radio controls filter the seven products and checkboxes add products to the same-page cart. The order and contact forms open the visitor's email application addressed to supportautopartsstore@gmail.com. Product details and prices are sample project content. The cart is limited to the Products page because the site uses only HTML, CSS, and Bootstrap.
+Open `index.html` in a browser. On the Products page, radio controls filter the seven products and checkboxes add products to the same-page cart. The order and contact forms open the visitor's email application addressed to supportautopartsstore@gmail.com. Product details and prices are sample project content. The cart is limited to the Products page because the site uses only HTML, CSS, and Bootstrap.
